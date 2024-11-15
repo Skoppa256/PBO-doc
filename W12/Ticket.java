@@ -1,3 +1,5 @@
+import java.util.List;
+
 public class Ticket {
     protected double baseFare;
     protected String passengerName;
@@ -24,6 +26,10 @@ public class Ticket {
     public double calculateFare(){
         double fareAfterTax = baseFare + (baseFare * (tax / 100));
         return fareAfterTax + additionalCharge;
+    }
+
+    public List getFacilities() {
+        return List.of("Basic seating");
     }
 
     public void displayTicketInfo() {

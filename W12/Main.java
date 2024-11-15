@@ -9,13 +9,16 @@ public class Main {
         economy.setTax(10);
         System.out.println("Economy Ticket:");
         economy.displayTicketInfo();
+        economy.getFacilities();
 
         business.setTax(10);
         System.out.println("\nBusiness Ticket:");    
         business.displayTicketInfo();
+        business.getFacilities();
 
         firstClass.setTax(10);
         System.out.println("\nFirst Class Ticket:");
         firstClass.displayTicketInfo();
+        firstClass.getFacilities();
     }
 }

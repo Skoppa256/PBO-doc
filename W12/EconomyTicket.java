@@ -1,3 +1,5 @@
+import java.util.List;
+
 public class EconomyTicket extends Ticket {
     private double luggageAllowance;
 
@@ -19,6 +21,11 @@ public class EconomyTicket extends Ticket {
         baseFare = baseFare * 0.9;
         double fareAfterTax = baseFare + (baseFare * (tax / 100));
         return fareAfterTax + additionalCharge;
+    }
+
+    @Override
+    public List getFacilities() {
+        return List.of("Basic seating");
     }
 
     @Override

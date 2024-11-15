@@ -1,3 +1,5 @@
+import java.util.List;
+
 public class BusinessTicket extends Ticket {
     private double luggageAllowance;
 
@@ -19,6 +21,11 @@ public class BusinessTicket extends Ticket {
         baseFare = baseFare * 1.25;
         double fareAfterTax = baseFare + (baseFare * (tax / 100));
         return fareAfterTax + additionalCharge;
+    }
+
+    @Override
+    public List getFacilities() {
+        return List.of("Business seating", "Free meal", "Priority boarding");
     }
 
     @Override
